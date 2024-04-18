@@ -11,7 +11,7 @@ const { router } = require("./routes/router")
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json())
-app.use("/api", router);
+app.use("/", router);
 
 app.get("/", (req, res) => {
     res.send("Welcome..");
