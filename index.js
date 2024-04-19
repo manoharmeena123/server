@@ -4,14 +4,14 @@ const bodyParser = require('body-parser');
 const app = express();
 const {connection} = require("./config/database");
 require("dotenv").config();
-const { router } = require("./routes/router")
+// const router  = require("./routes/router")
 
 // ======================Middlewares======================================>
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json())
-app.use("/", router);
+app.use("/api", require("./routes/router"));
 
 app.get("/", (req, res) => {
     res.send("Welcome..");

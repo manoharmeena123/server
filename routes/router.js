@@ -5,7 +5,7 @@ const { createData, updateData,getCount,getData} = require('../controllers/dataC
 
 router.get("/get", getData)
 router.get("/count", getCount)
-router.post('/add', createData);
+router.post('/create', createData);
 router.put('/update/:id', updateData);
 
-module.exports = { router }
+module.exports = router;
